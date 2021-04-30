@@ -1,0 +1,14 @@
+<tabs>
+    <tab
+        id="@+id/tab_home"
+        icon="@drawable/ic_home"
+        title="主页" />
+    <tab
+        id="@+id/tab_bill"
+        icon="@drawable/ic_survey"
+        title="订单" />
+    <tab
+        id="@+id/tab_person"
+        icon="@drawable/ic_user"
+        title="个人" />
+</tabs>

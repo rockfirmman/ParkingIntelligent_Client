@@ -1,0 +1,3 @@
+include ':sweet-dialog-lib'
+include ':app'
+rootProject.name = "ParkingIntelligent"

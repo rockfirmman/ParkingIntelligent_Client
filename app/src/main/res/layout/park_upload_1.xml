@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/parkUpload"
+    tools:context=".page.ParkUploadPage">
+    <com.hjq.bar.TitleBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backButton="false"
+        app:leftColor="#FF3300"
+        app:leftSize="18sp"
+        app:leftTitle="  主  页"
+        app:rightColor="#0033FF"
+        app:rightSize="18sp"
+        app:rightTitle="下一步"
+        app:title="停车位信息上传"
+        app:titleSize="20sp"
+        android:id="@+id/parkUploadTitleBar"/>
+    <LinearLayout
+        android:id="@+id/parkStep"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        >
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ParkStepContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
