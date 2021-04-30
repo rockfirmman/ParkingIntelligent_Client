@@ -19,10 +19,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.parkingintelligent.R;
 import com.example.parkingintelligent.util.FormDataUtil;
+import com.example.parkingintelligent.util.SPSaveUtil;
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.io.IOException;
+import java.util.Map;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.reactivex.functions.Consumer;
@@ -54,13 +56,16 @@ public class LoginPage extends AppCompatActivity {
         _loginButton = findViewById(R.id.LoginButton);
         _registerButton = findViewById(R.id.registerbutton);
         requestPermissions();
+        Map<String, String> userInfo = SPSaveUtil.getUserInfo(this);
+        if (userInfo != null){
+            _username.setText(userInfo.get("username"));
+            _password.setText(userInfo.get("password"));
+        }
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // 从缓存中获取账号密码
-                final SharedPreferences preferences = getSharedPreferences("userdata", MODE_PRIVATE);
-
+                final SharedPreferences preferences = getSharedPreferences("data", MODE_PRIVATE);
                 // 加载中
                 final SweetAlertDialog pDialog = new SweetAlertDialog(v.getContext(), SweetAlertDialog.PROGRESS_TYPE);
                 pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
@@ -100,7 +105,7 @@ public class LoginPage extends AppCompatActivity {
                     pDialog.setTitleText(response.getString("message")).show();
                 }
 
-                // 设置共享内存
+                //保存用户信息
                 preferences.edit()
                         .putString("username", _username.getText().toString())
                         .putString("password", _password.getText().toString())
