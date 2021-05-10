@@ -17,7 +17,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.alibaba.fastjson.JSON;
 import com.example.parkingintelligent.R;
+import com.example.parkingintelligent.data.StaticMessage;
 import com.example.parkingintelligent.util.FormDataUtil;
 import com.example.parkingintelligent.util.SPSaveUtil;
 import com.tbruyelle.rxpermissions2.Permission;
@@ -73,7 +75,7 @@ public class LoginPage extends AppCompatActivity {
                 pDialog.setCancelable(false);
                 pDialog.show();
 
-                // 加载完成后
+                // 加载完成后，将输入信息添加入builder
                 MultipartBody.Builder builder=  new MultipartBody.Builder().setType(MultipartBody.FORM);
                 builder.addFormDataPart("username",_username.getText().toString());
                 builder.addFormDataPart("password",_password.getText().toString());
@@ -88,7 +90,17 @@ public class LoginPage extends AppCompatActivity {
                 }
 
                 // 判断请求success or fail
-                if(response.getString("status").equals("success")){
+                if(response.getString("status")==null){
+                    pDialog.changeAlertType(SweetAlertDialog.ERROR_TYPE);
+                    pDialog.setTitleText("网络出现问题").show();
+                }else if(response.getString("status").equals("success")){
+                    // 存入静态数据中
+                    StaticMessage.id = JSON.parseObject(response.getString("data")).getIntValue("id");
+                    StaticMessage.username = JSON.parseObject(response.getString("data")).getString("username");
+                    StaticMessage.phone = JSON.parseObject(response.getString("data")).getString("phone");
+                    StaticMessage.email = JSON.parseObject(response.getString("data")).getString("email");
+                    StaticMessage.account = JSON.parseObject(response.getString("data")).getString("account");
+
                     // 直接跳转
                     pDialog.changeAlertType(SweetAlertDialog.SUCCESS_TYPE);
                     pDialog.setTitleText("登陆成功").show();
@@ -105,7 +117,7 @@ public class LoginPage extends AppCompatActivity {
                     pDialog.setTitleText(response.getString("message")).show();
                 }
 
-                //保存用户信息
+                //保存用户信息至缓存
                 preferences.edit()
                         .putString("username", _username.getText().toString())
                         .putString("password", _password.getText().toString())
@@ -144,7 +156,5 @@ public class LoginPage extends AppCompatActivity {
                         }
                     }
                 });
-
-
     }
 }

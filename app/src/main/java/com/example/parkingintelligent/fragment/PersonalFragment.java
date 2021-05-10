@@ -44,4 +44,6 @@ public class PersonalFragment extends Fragment {
 
         return _view;
     }
+
+
 }

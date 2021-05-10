@@ -9,8 +9,47 @@
     <option name="TOOL_WINDOW_LOG_LEVEL" value="error" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8191175-e8ba-4a69-b863-a048b647a7f6" name="Default Changelist" comment="" />
+    <list default="true" id="b8191175-e8ba-4a69-b863-a048b647a7f6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/BillFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/BillFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/PersonalFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/PersonalFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/RegisterPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/RegisterPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-hdpi/ic_home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bill_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/bill_page.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/register_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/register_page.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,12 +90,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_API_30_x86" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-03T16:53:28.635Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="R5CR10067KM" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-04-30T11:37:23.995Z" />
     <property name="ResourceManagerPrefKey.ResourceType" value="MIPMAP" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -71,15 +110,19 @@
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.example.parkingintelligent.page" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.parkingintelligent.page" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res\drawable-hdpi" />
+      <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res\drawable" />
       <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\java\com\example\parkingintelligent" />
       <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res" />
       <recent name="F:\codelib\AndroidWorkLib\ParkingIntelligent\app\src\main\res\layout" />
-      <recent name="F:\codelib\AndroidWorkLib\ParkingIntelligent\app\src\main\res\values" />
-      <recent name="F:\codelib\AndroidWorkLib\ParkingIntelligent\app\src\main\res\drawable" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.parkingintelligent.page" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res\drawable" />
+      <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">
@@ -193,6 +236,18 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="238" y="179" key="#PSD" timestamp="1619604854149">
       <screen x="0" y="0" width="1440" height="860" />
@@ -210,26 +265,26 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="346" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.860@0.0.1440.860" timestamp="1619700124200" />
-    <state x="94" y="94" width="1253" height="673" key="AVDManager" timestamp="1619764786905">
+    <state x="94" y="94" width="1253" height="673" key="AVDManager" timestamp="1620651772218">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="94" y="94" width="1253" height="673" key="AVDManager/0.0.1440.860@0.0.1440.860" timestamp="1619764786905" />
-    <state width="1396" height="189" key="GridCell.Tab.0.bottom" timestamp="1619769031642">
+    <state x="94" y="94" width="1253" height="673" key="AVDManager/0.0.1440.860@0.0.1440.860" timestamp="1620651772218" />
+    <state width="1396" height="310" key="GridCell.Tab.0.bottom" timestamp="1620655366765">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1396" height="189" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1619769031642" />
-    <state width="1396" height="189" key="GridCell.Tab.0.center" timestamp="1619769031642">
+    <state width="1396" height="310" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1620655366765" />
+    <state width="1396" height="310" key="GridCell.Tab.0.center" timestamp="1620655366765">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1396" height="189" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1619769031642" />
-    <state width="1396" height="189" key="GridCell.Tab.0.left" timestamp="1619769031642">
+    <state width="1396" height="310" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1620655366765" />
+    <state width="1396" height="310" key="GridCell.Tab.0.left" timestamp="1620655366765">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1396" height="189" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1619769031642" />
-    <state width="1396" height="189" key="GridCell.Tab.0.right" timestamp="1619769031642">
+    <state width="1396" height="310" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1620655366765" />
+    <state width="1396" height="310" key="GridCell.Tab.0.right" timestamp="1620655366765">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1396" height="189" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1619769031642" />
+    <state width="1396" height="310" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1620655366765" />
     <state x="136" y="149" key="SettingsEditor" timestamp="1619605565727">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -238,10 +293,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="436" y="282" key="psd.add.jar.dependency.panel.dimension/0.0.1440.860@0.0.1440.860" timestamp="1619603479011" />
-    <state x="382" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1619702703920">
+    <state x="380" y="178" width="672" height="678" key="search.everywhere.popup" timestamp="1620644454135">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="382" y="180" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1619702703920" />
+    <state x="380" y="178" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1620644454135" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
