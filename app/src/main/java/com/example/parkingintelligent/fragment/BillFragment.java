@@ -14,8 +14,11 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.example.parkingintelligent.R;
+import com.example.parkingintelligent.data.BillModel;
 import com.example.parkingintelligent.data.StaticMessage;
 import com.example.parkingintelligent.page.LoginPage;
 import com.example.parkingintelligent.page.MainActivity;
@@ -23,6 +26,7 @@ import com.example.parkingintelligent.page.RegisterPage;
 import com.example.parkingintelligent.util.FormDataUtil;
 
 import java.io.IOException;
+import java.util.List;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import okhttp3.MultipartBody;
@@ -44,30 +48,40 @@ public class BillFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         _view = inflater.inflate(R.layout.bill_page, container, false);
         _container = container;
-        final SweetAlertDialog pDialog = new SweetAlertDialog(_view.getContext(), SweetAlertDialog.PROGRESS_TYPE);
         _refreshButton = _view.findViewById(R.id.refreshButton);
         _PaidPageText = _view.findViewById(R.id.PaidPageText);
         _PaidPageText.setText("Hello " + StaticMessage.username);
 
+//        _PaidPageText.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                _PaidPageText.setText("click " + StaticMessage.username);
+//                JSONObject response = selectBillById(pDialog);
+//                _PaidPageText.setText(response.getString("status"));
+//            }
+//        });
         _PaidPageText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                _PaidPageText.setText("click " + StaticMessage.username);
-                JSONObject response = sendRequestWithOkHttp(pDialog);
-                _PaidPageText.setText(response.getString("status"));
+                JSONObject response = selectBillById();
+                JSONArray jsonArray = response.getJSONArray("data");
+                _PaidPageText.setText(jsonArray.get(0).toString());
+                int length = jsonArray.size();
+                _PaidPageText.setText(jsonArray.get(length-1).toString());
+//                List<BillModel>  billModelList = JSONArray.toList(jsonArray,BillModel.class);
+//                _PaidPageText.setText(billModelList.get(0).toString());
             }
         });
-
 
         return _view;
     }
 
-    private JSONObject sendRequestWithOkHttp(SweetAlertDialog pDialog){
-
+    private JSONObject selectBillById(){
+        final SweetAlertDialog pDialog = new SweetAlertDialog(_view.getContext(), SweetAlertDialog.PROGRESS_TYPE);
         MultipartBody.Builder builder=  new MultipartBody.Builder().setType(MultipartBody.FORM);
-        builder.addFormDataPart("id",String.valueOf(StaticMessage.id));
+        builder.addFormDataPart("payerId",String.valueOf(StaticMessage.id));
         // 发送post请求
-        String url = "http://116.63.40.220:8333/bill/selectBillById";
+        String url = "http://116.63.40.220:8333/bill/selectBillByPayerId";
         JSONObject response = null;
         try {
             response = FormDataUtil.post(url,builder);

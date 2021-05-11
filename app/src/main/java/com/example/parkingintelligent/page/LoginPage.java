@@ -95,11 +95,12 @@ public class LoginPage extends AppCompatActivity {
                     pDialog.setTitleText("网络出现问题").show();
                 }else if(response.getString("status").equals("success")){
                     // 存入静态数据中
-                    StaticMessage.id = JSON.parseObject(response.getString("data")).getIntValue("id");
-                    StaticMessage.username = JSON.parseObject(response.getString("data")).getString("username");
-                    StaticMessage.phone = JSON.parseObject(response.getString("data")).getString("phone");
-                    StaticMessage.email = JSON.parseObject(response.getString("data")).getString("email");
-                    StaticMessage.account = JSON.parseObject(response.getString("data")).getString("account");
+                    JSONObject data = JSON.parseObject(response.getString("data"));
+                    StaticMessage.id = data.getIntValue("id");
+                    StaticMessage.username = data.getString("username");
+                    StaticMessage.phone = data.getString("phone");
+                    StaticMessage.email = data.getString("email");
+                    StaticMessage.account = data.getString("account");
 
                     // 直接跳转
                     pDialog.changeAlertType(SweetAlertDialog.SUCCESS_TYPE);

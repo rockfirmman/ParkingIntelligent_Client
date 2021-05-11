@@ -45,7 +45,7 @@
         </activity>
         <activity android:name=".page.ParkUploadPage">
         </activity>
-        <activity android:name=".page.BillPage">
+        <activity android:name=".page.CarUploadPage">
         </activity>
     </application>
 
