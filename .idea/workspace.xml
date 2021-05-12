@@ -40,13 +40,10 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/data/BillModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/data/BillModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/data/StaticMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/data/StaticMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/BillFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/BillFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/PersonalFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/PersonalFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/personal_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/personal_page.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bill_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/bill_page.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +66,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="resourceFile" />
         <option value="Class" />
+        <option value="resourceFile" />
         <option value="layoutResourceFile" />
       </list>
     </option>
@@ -93,7 +90,7 @@
     <property name="ResourceManagerPrefKey.ResourceType" value="MIPMAP" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-hdpi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -109,8 +106,8 @@
       <recent name="com.example.parkingintelligent.page" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res\drawable-hdpi" />
       <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res\drawable" />
+      <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res\drawable-hdpi" />
       <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\java\com\example\parkingintelligent" />
       <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res" />
       <recent name="F:\codelib\AndroidWorkLib\ParkingIntelligent\app\src\main\res\layout" />
@@ -255,10 +252,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="420" y="17" key="#app/0.0.1440.860@0.0.1440.860" timestamp="1619600981781" />
-    <state x="526" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1620656848402">
+    <state x="526" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1620741029967">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="526" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1620656848402" />
+    <state x="526" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1620741029967" />
     <state x="346" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1619700124200">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -267,22 +264,22 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="94" y="94" width="1253" height="673" key="AVDManager/0.0.1440.860@0.0.1440.860" timestamp="1620651772218" />
-    <state width="1396" height="195" key="GridCell.Tab.0.bottom" timestamp="1620737276917">
+    <state width="1396" height="104" key="GridCell.Tab.0.bottom" timestamp="1620808800393">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1396" height="195" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1620737276917" />
-    <state width="1396" height="195" key="GridCell.Tab.0.center" timestamp="1620737276917">
+    <state width="1396" height="104" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1620808800393" />
+    <state width="1396" height="104" key="GridCell.Tab.0.center" timestamp="1620808800393">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1396" height="195" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1620737276917" />
-    <state width="1396" height="195" key="GridCell.Tab.0.left" timestamp="1620737276917">
+    <state width="1396" height="104" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1620808800393" />
+    <state width="1396" height="104" key="GridCell.Tab.0.left" timestamp="1620808800393">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1396" height="195" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1620737276917" />
-    <state width="1396" height="195" key="GridCell.Tab.0.right" timestamp="1620737276917">
+    <state width="1396" height="104" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1620808800393" />
+    <state width="1396" height="104" key="GridCell.Tab.0.right" timestamp="1620808800393">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="1396" height="195" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1620737276917" />
+    <state width="1396" height="104" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1620808800393" />
     <state x="136" y="149" key="SettingsEditor" timestamp="1619605565727">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -291,10 +288,14 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="436" y="282" key="psd.add.jar.dependency.panel.dimension/0.0.1440.860@0.0.1440.860" timestamp="1619603479011" />
-    <state x="380" y="178" width="672" height="678" key="search.everywhere.popup" timestamp="1620644454135">
+    <state x="377" y="195" key="run.anything.popup" timestamp="1620742398770">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="380" y="178" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1620644454135" />
+    <state x="377" y="195" key="run.anything.popup/0.0.1440.860@0.0.1440.860" timestamp="1620742398770" />
+    <state x="379" y="177" width="672" height="678" key="search.everywhere.popup" timestamp="1620745507263">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="379" y="177" width="672" height="678" key="search.everywhere.popup/0.0.1440.860@0.0.1440.860" timestamp="1620745507263" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
