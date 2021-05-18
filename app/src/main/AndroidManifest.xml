@@ -47,6 +47,10 @@
         </activity>
         <activity android:name=".page.CarUploadPage">
         </activity>
+        <activity
+            android:name=".page.BillInformation"
+            android:theme="@style/MyActivityStyle" >
+        </activity>
     </application>
 
 </manifest>

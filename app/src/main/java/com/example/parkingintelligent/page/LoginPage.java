@@ -2,9 +2,13 @@ package com.example.parkingintelligent.page;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
@@ -16,6 +20,7 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import com.alibaba.fastjson.JSON;
 import com.example.parkingintelligent.R;
@@ -41,7 +46,8 @@ import com.google.gson.Gson;
 import com.alibaba.fastjson.JSONObject;
 
 public class LoginPage extends AppCompatActivity {
-
+    private NotificationManager manager;
+    private Notification notification;
     private EditText _username;
     private EditText _password;
     private Button _loginButton;
@@ -63,6 +69,26 @@ public class LoginPage extends AppCompatActivity {
             _username.setText(userInfo.get("username"));
             _password.setText(userInfo.get("password"));
         }
+
+        //创建通知管理
+
+        manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("leo", "测试通知", NotificationManager.IMPORTANCE_HIGH);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+//            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+        notification = new NotificationCompat.Builder(this, "chat")
+                .setAutoCancel(true)
+                .setContentTitle("收到聊天消息")
+                .setContentText("今天晚上吃什么")
+                .setWhen(System.currentTimeMillis())
+                .setSmallIcon(R.mipmap.ic_launcher)
+                //在build()方法之前还可以添加其他方法
+                .build();
+
 
         _loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -157,5 +183,8 @@ public class LoginPage extends AppCompatActivity {
                         }
                     }
                 });
+    }
+    public void sendNotification(View view){
+        manager.notify(1,notification);
     }
 }

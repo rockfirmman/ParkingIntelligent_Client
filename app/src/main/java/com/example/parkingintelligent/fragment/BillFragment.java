@@ -9,12 +9,14 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
@@ -22,10 +24,13 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.example.parkingintelligent.R;
+import com.example.parkingintelligent.adapter.BillAdapter;
 import com.example.parkingintelligent.data.BillModel;
 import com.example.parkingintelligent.data.StaticMessage;
+import com.example.parkingintelligent.page.BillInformation;
 import com.example.parkingintelligent.page.LoginPage;
 import com.example.parkingintelligent.page.MainActivity;
+import com.example.parkingintelligent.page.ParkUploadPage;
 import com.example.parkingintelligent.page.RegisterPage;
 import com.example.parkingintelligent.util.FormDataUtil;
 
@@ -39,7 +44,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 import okhttp3.MultipartBody;
 
 
-public class BillFragment extends Fragment {
+public class BillFragment extends Fragment implements AdapterView.OnItemClickListener {
     protected View _view;
     protected ViewGroup _container;
     protected ImageButton _refreshButton;
@@ -68,6 +73,7 @@ public class BillFragment extends Fragment {
         StaticMessage.billModelList = new ArrayList<>();
         StaticMessage.billModelList = JSONObject.parseArray(String.valueOf(jsonArray),BillModel.class);
 
+        // ArrayAdapter样例
 //        ArrayAdapter<BillModel> adapter
 //                = new ArrayAdapter<BillModel>(
 //                this.getActivity(),
@@ -75,16 +81,24 @@ public class BillFragment extends Fragment {
 //                StaticMessage.billModelList);
 //        _listView.setAdapter(adapter);
 
-        List<Map<String,Object>> list = createMap();
-        SimpleAdapter adapter = new SimpleAdapter(
-                this.getActivity(),
-                list,
-                R.layout.item,
-                new String[]{"text1","text2","text3","logo","btn"},
-                new int[]{R.id.text1,R.id.text2,R.id.text3,R.id.logo,R.id.btn}
-        );
-        _listView.setAdapter(adapter);
+        // SimpleAdapter样例
+//        List<Map<String,Object>> list = createMap();
+//        SimpleAdapter adapter = new SimpleAdapter(
+//                this.getActivity(),
+//                list,
+//                R.layout.item,
+//                new String[]{"text1","text2","text3","logo","btn_text"},
+//                new int[]{R.id.text1,R.id.text2,R.id.text3,R.id.logo,R.id.btn}
+//        );
+//        _listView.setAdapter(adapter);
 
+        List<Map<String,Object>> list = createMap();
+        BillAdapter billAdapter = new BillAdapter(this.getActivity());
+        billAdapter.setList(list);
+        _listView.setAdapter(billAdapter);
+
+        // 监听item事件
+        _listView.setOnItemClickListener(this);
 
         // 重新获取账单，刷新listView
         _refreshButton.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +109,12 @@ public class BillFragment extends Fragment {
             //JSONArray直接转化成javabean
             StaticMessage.billModelList = new ArrayList<>();
             StaticMessage.billModelList = JSONObject.parseArray(String.valueOf(jsonArray),BillModel.class);
+            //重新获得账单列表，display至listView
+            List<Map<String,Object>> list = createMap();
+            BillAdapter billAdapter = new BillAdapter(v.getContext());
+            billAdapter.setList(list);
+            _listView.setAdapter(billAdapter);
+
 
             }
         });
@@ -139,18 +159,32 @@ public class BillFragment extends Fragment {
             map.put("text3",billModel.endTime);
             if(billModel.state==1){
                 map.put("logo",R.drawable.state_3);
-                map.put("btn","进行中");
+                map.put("btn_text","进行中");
+                map.put("btn_color","#fff2cc");
             }
             if(billModel.state==2){
                 map.put("logo",R.drawable.state_3);
-                map.put("btn","待支付");
+                map.put("btn_text","待支付");
+                map.put("btn_color","#cfe2f3");
             }
             if(billModel.state==3){
                 map.put("logo",R.drawable.state_3);
-                map.put("btn","已完成");
+                map.put("btn_text","已完成");
+                map.put("btn_color","#b6d7a8");
             }
             list.add(map);
         }
         return list;
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        // 面包点击测试
+        Toast.makeText(this.getActivity(),"点击"+position,Toast.LENGTH_SHORT).show();
+        // 确定点击的为第几个账单
+        StaticMessage.billModel = StaticMessage.billModelList.get(position);
+        // Activity式伪弹窗
+        Intent intent =new Intent(_view.getContext(), BillInformation.class);
+        startActivity(intent);
     }
 }

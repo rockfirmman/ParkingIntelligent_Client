@@ -11,7 +11,8 @@
         android:layout_marginLeft="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="5dp"
-        android:padding="5dp">
+        android:padding="5dp"
+        android:descendantFocusability="blocksDescendants">
 
         <ImageView
             android:id="@+id/logo"
@@ -26,6 +27,7 @@
             android:layout_height="wrap_content"
             android:text="详情"
             android:layout_alignParentRight="true"
+            android:background="#a4b4cf"
             android:layout_centerVertical="true"/>
 
         <RelativeLayout
