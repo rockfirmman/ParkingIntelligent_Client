@@ -60,4 +60,5 @@ dependencies {
     //阿里的fastJson
     implementation 'com.alibaba:fastjson:1.1.54.android'
 
+    implementation 'androidx.core:core:1.0.0'
 }

@@ -2,9 +2,11 @@ package com.example.parkingintelligent.page;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -13,10 +15,12 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +36,8 @@ import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.io.IOException;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
 import io.reactivex.functions.Consumer;
@@ -52,6 +58,8 @@ public class LoginPage extends AppCompatActivity {
     private EditText _password;
     private Button _loginButton;
     private TextView _registerButton;
+
+
     @SuppressLint("NewApi")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -70,26 +78,6 @@ public class LoginPage extends AppCompatActivity {
             _password.setText(userInfo.get("password"));
         }
 
-        //创建通知管理
-
-        manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel("leo", "测试通知", NotificationManager.IMPORTANCE_HIGH);
-            // Register the channel with the system; you can't change the importance
-            // or other notification behaviors after this
-//            NotificationManager notificationManager = getSystemService(NotificationManager.class);
-            manager.createNotificationChannel(channel);
-        }
-        notification = new NotificationCompat.Builder(this, "chat")
-                .setAutoCancel(true)
-                .setContentTitle("收到聊天消息")
-                .setContentText("今天晚上吃什么")
-                .setWhen(System.currentTimeMillis())
-                .setSmallIcon(R.mipmap.ic_launcher)
-                //在build()方法之前还可以添加其他方法
-                .build();
-
-
         _loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -107,7 +95,7 @@ public class LoginPage extends AppCompatActivity {
                 builder.addFormDataPart("password",_password.getText().toString());
 
                 // 发送post请求
-                String url = "http://116.63.40.220:8333/user/login";
+                String url = StaticMessage.baseURL + "/user/login";
                 JSONObject response = null;
                 try {
                     response = FormDataUtil.post(url,builder);
@@ -184,7 +172,6 @@ public class LoginPage extends AppCompatActivity {
                     }
                 });
     }
-    public void sendNotification(View view){
-        manager.notify(1,notification);
-    }
+
+
 }

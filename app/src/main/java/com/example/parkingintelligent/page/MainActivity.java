@@ -1,25 +1,43 @@
 package com.example.parkingintelligent.page;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
 
 import android.Manifest;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.example.parkingintelligent.R;
+import com.example.parkingintelligent.data.BillModel;
+import com.example.parkingintelligent.data.StaticMessage;
 import com.example.parkingintelligent.fragment.BDMapView;
 import com.example.parkingintelligent.fragment.BillFragment;
 import com.example.parkingintelligent.fragment.PersonalFragment;
+import com.example.parkingintelligent.util.FormDataUtil;
 import com.roughike.bottombar.BottomBar;
 import com.roughike.bottombar.OnTabSelectListener;
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
+import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import io.reactivex.functions.Consumer;
+import okhttp3.MultipartBody;
 
 public class MainActivity extends AppCompatActivity {
+    private NotificationManager manager;
+    private Notification notification;
+    Timer timer = new Timer();
 
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
@@ -90,9 +108,27 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        //创建通知管理
+        manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel("leo", "测试通知", NotificationManager.IMPORTANCE_HIGH);
+            // Register the channel with the system; you can't change the importance
+            // or other notification behaviors after this
+//            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+        }
+        notification = new NotificationCompat.Builder(this, "leo")
+                .setAutoCancel(true)
+                .setContentTitle("收到账单信息")
+                .setContentText("今天晚上吃什么")
+                .setSmallIcon(R.mipmap.ic_launcher)
+                //在build()方法之前还可以添加其他方法
+                .build();
 
-
+        //使用timer开始轮询
+        timer.schedule(task, 2000, 2000);
     }
+
     private void requestPermissions() {
         RxPermissions rxPermission = new RxPermissions(MainActivity.this);
         rxPermission
@@ -120,4 +156,48 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    TimerTask task = new TimerTask() {
+        @Override
+        public void run() {
+            // TODO Auto-generated method stub
+            runOnUiThread(new Runnable() {
+
+                @Override
+                public void run() {
+                    // TODO Auto-generated method stub
+                    MultipartBody.Builder builder=  new MultipartBody.Builder().setType(MultipartBody.FORM);
+                    builder.addFormDataPart("payerId", String.valueOf(StaticMessage.id));
+                    String url = StaticMessage.baseURL + "/bill/poll";
+                    JSONObject response = null;
+                    try {
+                        response = FormDataUtil.post(url,builder);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                    if("success".equals(response.getString("status"))){
+                        JSONObject bill = JSON.parseObject(response.getString("data"));
+                        StaticMessage.billModel = JSONObject.toJavaObject(bill,BillModel.class);
+                        String message = "";
+                        if(StaticMessage.billModel.state==1){
+                            message += "新的账单开始，开始时间为：" + StaticMessage.billModel.startTime;
+                        }else if(StaticMessage.billModel.state==2){
+                            message += "您的账单结束，等待支付，开始时间为：" + StaticMessage.billModel.startTime;
+                            message += "    结束时间为：" + StaticMessage.billModel.endTime;
+                        }else{
+                            message = "您的订单完成支付";
+                        }
+                        notification = new NotificationCompat.Builder(getApplicationContext(), "leo")
+                                .setAutoCancel(true)
+                                .setContentTitle("收到账单信息")
+                                .setContentText(StaticMessage.billModel.toString())
+                                .setSmallIcon(R.mipmap.ic_launcher)
+                                //在build()方法之前还可以添加其他方法
+                                .build();
+                        manager.notify(1,notification);
+                    }
+                }
+            });
+        }
+    };
 }
