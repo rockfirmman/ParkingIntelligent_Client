@@ -12,4 +12,6 @@ public class StaticMessage {
     public static String phone;
     public static String email;
     public static String account;
+
+    public static List<ParkingFieldModel> parkingFieldModels;
 }

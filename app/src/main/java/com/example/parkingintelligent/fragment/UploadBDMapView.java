@@ -31,10 +31,6 @@ public class UploadBDMapView extends BDMapView {
             {
                 _bdMap.setOnMapClickListener(AddPositionListener());
             }
-
-            // test for location
-            LatLng latLng = new LatLng(22,114);
-
         }
         return _view;
     }

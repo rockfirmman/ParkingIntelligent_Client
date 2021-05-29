@@ -27,7 +27,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.example.parkingintelligent.R;
+import com.example.parkingintelligent.data.ParkingFieldModel;
 import com.example.parkingintelligent.data.StaticMessage;
 import com.example.parkingintelligent.util.FormDataUtil;
 import com.example.parkingintelligent.util.SPSaveUtil;
@@ -35,6 +37,7 @@ import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -137,6 +140,21 @@ public class LoginPage extends AppCompatActivity {
                         .putString("username", _username.getText().toString())
                         .putString("password", _password.getText().toString())
                         .apply();
+
+                //获取停车场信息
+                // Get
+                builder=  new MultipartBody.Builder().setType(MultipartBody.FORM);
+                builder.addFormDataPart("payerId","test");
+                url = StaticMessage.baseURL + "/parkingfield/findAllFields";
+                response = null;
+                try {
+                    response = FormDataUtil.post(url,builder);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                JSONArray jsonArray = response.getJSONArray("data");
+                StaticMessage.parkingFieldModels = new ArrayList<>();
+                StaticMessage.parkingFieldModels = JSONObject.parseArray(String.valueOf(jsonArray), ParkingFieldModel.class);
             }
         });
         _registerButton.setOnClickListener(new View.OnClickListener() {

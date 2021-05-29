@@ -1,24 +1,41 @@
 package com.example.parkingintelligent.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.BitmapDescriptor;
+import com.baidu.mapapi.map.BitmapDescriptorFactory;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.example.parkingintelligent.R;
+import com.example.parkingintelligent.data.BillModel;
+import com.example.parkingintelligent.data.ParkingFieldModel;
+import com.example.parkingintelligent.data.StaticMessage;
+import com.example.parkingintelligent.util.FormDataUtil;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import okhttp3.MultipartBody;
 
 public class BDMapView extends Fragment {
 
@@ -31,6 +48,9 @@ public class BDMapView extends Fragment {
     protected BaiduMap _bdMap;
     protected LocationClient _locationClient;
     protected BDLocationListener myListener = new MyLocationListener();
+
+    protected OverlayOptions targetOverlayOption;
+
 
     @Override
     public void onCreate(Bundle saved) {
@@ -45,6 +65,7 @@ public class BDMapView extends Fragment {
         _bdMapView = _view.findViewById(R.id.baiduMapView);
         _bdMap  = _bdMapView.getMap();
         initMap();
+        draw();
         return _view;
     }
     @Override
@@ -138,6 +159,21 @@ public class BDMapView extends Fragment {
                     Toast.makeText(_view.getContext(), "手机模式错误，请检查是否飞行", Toast.LENGTH_SHORT).show();
                 }
             }
+        }
+    }
+
+    public void draw(){
+        // 添加地图Marker
+        BitmapDescriptor bitmap = BitmapDescriptorFactory
+                .fromResource(R.drawable.ic_location);
+
+        for (ParkingFieldModel p:StaticMessage.parkingFieldModels){
+            LatLng point = new LatLng(p.getLatitude(),p.getLongitude());
+            targetOverlayOption = new MarkerOptions()
+                    .position(point)
+                    .icon(bitmap);
+            //在地图上添加Marker，并显示
+            _bdMap.addOverlay(targetOverlayOption);
         }
     }
 }
