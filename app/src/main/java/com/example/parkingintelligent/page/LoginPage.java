@@ -140,21 +140,6 @@ public class LoginPage extends AppCompatActivity {
                         .putString("username", _username.getText().toString())
                         .putString("password", _password.getText().toString())
                         .apply();
-
-                //获取停车场信息
-                // Get
-                builder=  new MultipartBody.Builder().setType(MultipartBody.FORM);
-                builder.addFormDataPart("payerId","test");
-                url = StaticMessage.baseURL + "/parkingfield/findAllFields";
-                response = null;
-                try {
-                    response = FormDataUtil.post(url,builder);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-                JSONArray jsonArray = response.getJSONArray("data");
-                StaticMessage.parkingFieldModels = new ArrayList<>();
-                StaticMessage.parkingFieldModels = JSONObject.parseArray(String.valueOf(jsonArray), ParkingFieldModel.class);
             }
         });
         _registerButton.setOnClickListener(new View.OnClickListener() {

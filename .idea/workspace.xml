@@ -37,9 +37,7 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/data/StaticMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/data/StaticMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/BDMapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/BDMapView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/UploadBDMapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/UploadBDMapView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/LoginPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,12 +81,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="R5CR10067KM" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-29T16:55:05.713Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_XL_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-30T21:16:07.023Z" />
     <property name="ResourceManagerPrefKey.ResourceType" value="MIPMAP" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../RTPollingDemo-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -100,7 +98,17 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res\drawable" />
+      <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res" />
+    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="com.example.parkingintelligent.page" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.parkingintelligent" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.parkingintelligent.page" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -109,16 +117,6 @@
       <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\java\com\example\parkingintelligent" />
       <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res" />
       <recent name="F:\codelib\AndroidWorkLib\ParkingIntelligent\app\src\main\res\layout" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.example.parkingintelligent" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.parkingintelligent.page" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res\drawable" />
-      <recent name="C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\app\src\main\res" />
     </key>
   </component>
   <component name="RunManager" selected="Android App.app">

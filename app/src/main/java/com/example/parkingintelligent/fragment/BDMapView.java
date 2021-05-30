@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSONArray;
@@ -163,17 +165,49 @@ public class BDMapView extends Fragment {
     }
 
     public void draw(){
+        //获取停车场信息
+        // Get
+        MultipartBody.Builder builder=  new MultipartBody.Builder().setType(MultipartBody.FORM);
+        builder.addFormDataPart("payerId","test");
+        String url = StaticMessage.baseURL + "/parkingfield/findAllFields";
+        JSONObject response = null;
+        try {
+            response = FormDataUtil.post(url,builder);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        JSONArray jsonArray = response.getJSONArray("data");
+        StaticMessage.parkingFieldModels = new ArrayList<>();
+        StaticMessage.parkingFieldModels = JSONObject.parseArray(String.valueOf(jsonArray), ParkingFieldModel.class);
         // 添加地图Marker
         BitmapDescriptor bitmap = BitmapDescriptorFactory
                 .fromResource(R.drawable.ic_location);
 
+//        for (ParkingFieldModel p:StaticMessage.parkingFieldModels){
+//            LatLng point = new LatLng(p.getLatitude(),p.getLongitude());
+//            targetOverlayOption = new MarkerOptions()
+//                    .position(point)
+//                    .icon(bitmap);
+//            //在地图上添加Marker，并显示
+//            _bdMap.addOverlay(targetOverlayOption);
+//        }
+
         for (ParkingFieldModel p:StaticMessage.parkingFieldModels){
             LatLng point = new LatLng(p.getLatitude(),p.getLongitude());
-            targetOverlayOption = new MarkerOptions()
-                    .position(point)
-                    .icon(bitmap);
+            BitmapDescriptor bd_temp;
+            View v_temp = LayoutInflater.from(this.getActivity()).inflate(R.layout.text_up_img_down, null);//加载自定义的布局
+            TextView tv_temp = (TextView) v_temp.findViewById(R.id.baidumap_custom_text);//获取自定义布局中的textview
+            ImageView img_temp = (ImageView) v_temp.findViewById(R.id.baidumap_custom_img);//获取自定义布局中的imageview
+            tv_temp.setText(p.getName());//设置要显示的文本
+//        img_temp.setImageResource(imgIds[i]);//设置marker的图标
+            bd_temp = BitmapDescriptorFactory.fromView(v_temp);//用到了这个实例化方法来把自定义布局实现到marker中。
+            MarkerOptions oo = new MarkerOptions().position(point)
+                    .icon(bd_temp)
+                    .anchor(0.5f, 1.0f).zIndex(7);
             //在地图上添加Marker，并显示
-            _bdMap.addOverlay(targetOverlayOption);
+            _bdMap.addOverlay(oo);
         }
+
+
     }
 }
