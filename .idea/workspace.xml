@@ -37,8 +37,8 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/data/StaticMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/data/StaticMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/BDMapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/BDMapView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/page/LoginPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +82,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_3a_XL_API_30" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-30T21:16:07.023Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-05-31T00:03:01.422Z" />
     <property name="ResourceManagerPrefKey.ResourceType" value="MIPMAP" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -251,10 +251,14 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="420" y="17" key="#app/0.0.1440.860@0.0.1440.860" timestamp="1619600981781" />
-    <state x="526" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1622306586083">
+    <state x="416" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1622412980034">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="526" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1622306586083" />
+    <state x="416" y="231" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.860@0.0.1440.860" timestamp="1622412980034" />
+    <state x="526" y="114" key="#com.intellij.ide.util.MemberChooser" timestamp="1622417617941">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="526" y="114" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1622417617941" />
     <state x="455" y="297" width="530" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1621343995725">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,9 +22,11 @@ import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.map.BaiduMap;
 import com.baidu.mapapi.map.BitmapDescriptor;
 import com.baidu.mapapi.map.BitmapDescriptorFactory;
+import com.baidu.mapapi.map.InfoWindow;
 import com.baidu.mapapi.map.MapStatus;
 import com.baidu.mapapi.map.MapStatusUpdateFactory;
 import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.Marker;
 import com.baidu.mapapi.map.MarkerOptions;
 import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.OverlayOptions;
@@ -31,11 +34,13 @@ import com.baidu.mapapi.model.LatLng;
 import com.example.parkingintelligent.R;
 import com.example.parkingintelligent.data.BillModel;
 import com.example.parkingintelligent.data.ParkingFieldModel;
+import com.example.parkingintelligent.data.ParkingSlotModel;
 import com.example.parkingintelligent.data.StaticMessage;
 import com.example.parkingintelligent.util.FormDataUtil;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import okhttp3.MultipartBody;
 
@@ -68,6 +73,39 @@ public class BDMapView extends Fragment {
         _bdMap  = _bdMapView.getMap();
         initMap();
         draw();
+        _bdMap.setOnMarkerClickListener(new BaiduMap.OnMarkerClickListener() {
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                ParkingFieldModel parkingFieldModel = StaticMessage.map.get(marker);
+                Toast.makeText(getActivity(),"点击"+parkingFieldModel.getName(),Toast.LENGTH_SHORT).show();
+                // 获取控件
+                View view = View.inflate(getActivity(), R.layout.parking_field_information, null);
+                TextView _name = view.findViewById(R.id.name);
+                TextView _description = view.findViewById(R.id.description);
+                TextView _remain = view.findViewById(R.id.remain);
+                TextView _price = view.findViewById(R.id.price);
+                Button _quit = view.findViewById(R.id.quit);
+
+                // 获取当前停车场中停车位
+                List<ParkingSlotModel> parkingSlotModelList = selectParkingSlotByFieldId(parkingFieldModel.getId());
+                // modify message
+                _name.setText(parkingFieldModel.getName());
+                _description.setText("描述: " + parkingFieldModel.getDescription());
+                _remain.setText("空闲车位: " + countSlot(parkingSlotModelList));
+                _price.setText("价格: " + countPrice(parkingSlotModelList));
+
+                _quit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //关闭InfoWindow
+                        _bdMap.hideInfoWindow();
+                    }
+                });
+                final InfoWindow mInfoWindow = new InfoWindow(view, marker.getPosition(), -47);
+                _bdMap.showInfoWindow(mInfoWindow);
+                return false;
+            }
+        });
         return _view;
     }
     @Override
@@ -180,9 +218,8 @@ public class BDMapView extends Fragment {
         StaticMessage.parkingFieldModels = new ArrayList<>();
         StaticMessage.parkingFieldModels = JSONObject.parseArray(String.valueOf(jsonArray), ParkingFieldModel.class);
         // 添加地图Marker
-        BitmapDescriptor bitmap = BitmapDescriptorFactory
-                .fromResource(R.drawable.ic_location);
-
+//        BitmapDescriptor bitmap = BitmapDescriptorFactory
+//                .fromResource(R.drawable.ic_location);
 //        for (ParkingFieldModel p:StaticMessage.parkingFieldModels){
 //            LatLng point = new LatLng(p.getLatitude(),p.getLongitude());
 //            targetOverlayOption = new MarkerOptions()
@@ -205,9 +242,39 @@ public class BDMapView extends Fragment {
                     .icon(bd_temp)
                     .anchor(0.5f, 1.0f).zIndex(7);
             //在地图上添加Marker，并显示
-            _bdMap.addOverlay(oo);
+            Marker marker = (Marker) _bdMap.addOverlay(oo);
+            StaticMessage.map.put(marker,p);
         }
+    }
 
+    public List<ParkingSlotModel> selectParkingSlotByFieldId(int fieldId){
+        MultipartBody.Builder builder=  new MultipartBody.Builder().setType(MultipartBody.FORM);
+        builder.addFormDataPart("fieldId", String.valueOf(fieldId));
+        String url = StaticMessage.baseURL + "/parkingslot/selectParkingSlotByFieldId";
+        JSONObject response = null;
+        try {
+            response = FormDataUtil.post(url,builder);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        JSONArray jsonArray = response.getJSONArray("data");
+        List <ParkingSlotModel> result = JSONObject.parseArray(String.valueOf(jsonArray),ParkingSlotModel.class);
+        return result;
+    }
 
+    public int countSlot(List<ParkingSlotModel> parkingSlotModelList){
+        int res = 0;
+        for(ParkingSlotModel slot:parkingSlotModelList){
+            if(!slot.isOccupied()) res++;
+        }
+        return res;
+    }
+
+    public double countPrice(List<ParkingSlotModel> parkingSlotModelList){
+        int res = 0;
+        for(ParkingSlotModel slot:parkingSlotModelList){
+            res += slot.getPrice();
+        }
+        return res/parkingSlotModelList.size();
     }
 }

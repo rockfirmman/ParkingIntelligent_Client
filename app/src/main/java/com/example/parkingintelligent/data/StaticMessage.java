@@ -1,6 +1,9 @@
 package com.example.parkingintelligent.data;
 
+import com.baidu.mapapi.map.Marker;
+
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class StaticMessage {
@@ -14,4 +17,5 @@ public class StaticMessage {
     public static String account;
 
     public static List<ParkingFieldModel> parkingFieldModels;
+    public static HashMap<Marker,ParkingFieldModel> map = new HashMap<>();
 }
