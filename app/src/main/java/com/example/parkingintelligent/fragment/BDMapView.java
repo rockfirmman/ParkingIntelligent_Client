@@ -92,7 +92,7 @@ public class BDMapView extends Fragment {
                 _name.setText(parkingFieldModel.getName());
                 _description.setText("描述: " + parkingFieldModel.getDescription());
                 _remain.setText("空闲车位: " + countSlot(parkingSlotModelList));
-                _price.setText("价格: " + countPrice(parkingSlotModelList));
+                _price.setText("平均价格: " + countPrice(parkingSlotModelList));
 
                 _quit.setOnClickListener(new View.OnClickListener() {
                     @Override

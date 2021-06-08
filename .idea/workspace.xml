@@ -33,12 +33,43 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/data/StaticMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/data/StaticMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/BDMapView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/parkingintelligent/fragment/BDMapView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bill_information.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/bill_information.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_error_frame_in.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_error_frame_in.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_error_x_in.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_error_x_in.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_modal_in.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_modal_in.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_modal_out.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_modal_out.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_success_bow_roate.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_success_bow_roate.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_success_mask_layout.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/anim_success_mask_layout.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_blue_button_background.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_blue_button_background.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_dialog_background.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_dialog_background.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_error_center_x.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_error_center_x.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_error_circle.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_error_circle.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_gray_button_background.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_gray_button_background.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_red_button_background.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_red_button_background.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_success_bow.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_success_bow.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_success_circle.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_success_circle.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_warning_circle.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_warning_circle.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_warning_sigh.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/drawable_warning_sigh.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/layout_alert_dialog.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/compiled_local_resources/debug/out/layout_alert_dialog.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/mergeDebugJniLibFolders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/mergeDebugShaders/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/mergeDebugShaders/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/packageDebugAssets/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/packageDebugAssets/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/packageDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/incremental/packageDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/intermediates/manifest_merge_blame_file/debug/manifest-merger-blame-debug-report.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sweet-dialog-lib/build/outputs/logs/manifest-merger-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sweet-dialog-lib/build/outputs/logs/manifest-merger-debug-report.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +117,7 @@
     <property name="ResourceManagerPrefKey.ResourceType" value="MIPMAP" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Dependencies" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -247,10 +278,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="238" y="179" key="#PSD/0.0.1440.860@0.0.1440.860" timestamp="1619604854149" />
-    <state x="420" y="17" key="#app" timestamp="1619600981781">
+    <state x="420" y="17" key="#app" timestamp="1623185876081">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="420" y="17" key="#app/0.0.1440.860@0.0.1440.860" timestamp="1619600981781" />
+    <state x="420" y="17" key="#app/0.0.1440.860@0.0.1440.860" timestamp="1623185876081" />
     <state x="416" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1622412980034">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -275,10 +306,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="519" y="202" key="AndroidCreateXmlResourceDialog/0.0.1440.860@0.0.1440.860" timestamp="1621327698648" />
-    <state x="501" y="185" key="FileChooserDialogImpl" timestamp="1621344327836">
+    <state x="501" y="185" key="FileChooserDialogImpl" timestamp="1623185138829">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="501" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1621344327836" />
+    <state x="501" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1623185138829" />
     <state width="1396" height="328" key="GridCell.Tab.0.bottom" timestamp="1622307382070">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

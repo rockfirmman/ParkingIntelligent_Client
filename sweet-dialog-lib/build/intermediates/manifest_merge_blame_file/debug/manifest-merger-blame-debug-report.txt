@@ -5,9 +5,9 @@
 5    android:versionName="1.1" >
 6
 7    <uses-sdk android:minSdkVersion="16" />
-7-->C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\sweet-dialog-lib\src\main\AndroidManifest.xml
+7-->C:\Users\rockfirmman\Desktop\test\ParkingIntelligent\sweet-dialog-lib\src\main\AndroidManifest.xml
 8
 9    <application />
-9-->C:\Users\rockfirmman\Desktop\Test\ParkingIntelligent\sweet-dialog-lib\src\main\AndroidManifest.xml:6:1-16
+9-->C:\Users\rockfirmman\Desktop\test\ParkingIntelligent\sweet-dialog-lib\src\main\AndroidManifest.xml:6:1-16
 10
 11</manifest>
